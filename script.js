@@ -185,37 +185,134 @@
 //     alert(`Tem algo errado nessa senha`)
 // }
 
-const n1 = Number(prompt("Digite um numero: "))
-const n2 = Number(prompt("Digite outro numero: "))
-const operador = prompt("Escolha +, -, * ou / para operacao desejada: ")
+// const n1 = Number(prompt("Digite um numero: "))
+// const n2 = Number(prompt("Digite outro numero: "))
+// const operador = prompt("Escolha +, -, * ou / para operacao desejada: ")
 
-if (Number.isNaN(n1) || Number.isNaN(n2)) {
-    alert(`Valor invalido`)
-} else{
+// if (Number.isNaN(n1) || Number.isNaN(n2)) {
+//     alert(`Valor invalido`)
+// } else{
 
-    switch (operador) {
-        case "+":
-            alert(`${n1} + ${n2} = ${n1 + n2}`);
-            break;
-        case "-":
-            alert(`${n1} - ${n2} = ${n1 - n2}`);
-            break;
-        case "*":
-            alert(`${n1} * ${n2} = ${n1 * n2}`);
-            break;
-        case "/":
-            if (n2 == 0) {
-                alert(`Nao e possivel dividir por 0`);
-            } else {
-                alert(`${n1} / ${n2} = ${n1 / n2}`) ;
-            }
+//     switch (operador) {
+//         case "+":
+//             alert(`${n1} + ${n2} = ${n1 + n2}`);
+//             break;
+//         case "-":
+//             alert(`${n1} - ${n2} = ${n1 - n2}`);
+//             break;
+//         case "*":
+//             alert(`${n1} * ${n2} = ${n1 * n2}`);
+//             break;
+//         case "/":
+//             if (n2 == 0) {
+//                 alert(`Nao e possivel dividir por 0`);
+//             } else {
+//                 alert(`${n1} / ${n2} = ${n1 / n2}`) ;
+//             }
                 
-            break;
+//             break;
 
-        default:
-            if (operador != "+" || operador != "-" || operador != "*" || operador != "/") {
-                alert(`Operacao invalida!`)            
-            }
-            break;
-    }
-}
+//         default:
+//             if (operador != "+" || operador != "-" || operador != "*" || operador != "/") {
+//                 alert(`Operacao invalida!`)            
+//             }
+//             break;
+//     }
+// }
+
+// Estrutura de Repeticao
+// while
+// let i = 1
+// while (i <= 5) {
+//     console.log("Numero:", i)
+//     i++
+// }
+
+// do...while
+// let senha;
+// do {
+//     senha = prompt("Digite sua senha: ")
+// } while (senha !== "1234");
+// alert(`Acesso liberado!`)
+
+// for
+// estrutura: (inicio; condicao; encremento)
+// for (let i = 1; i <= 10; i++) {
+//     console.log(`7 x ${i} = ${7 * i}`);
+// }
+
+//for...of
+// const frutas = ["Maca", "Banana", "Laranja", "Pera"];
+// for (const fruta of frutas) {
+//     console.log("Fruta:", fruta)
+// }
+
+//for...in
+// const pessoa = {nome: "Wilson", idade: 49, cidade: "Sao Paulo"};
+// for (const chave in pessoa) {
+//     console.log(`${chave}: ${pessoa[chave]}`)
+// }
+
+//forEach
+// const numeros = [1,2,3,4,5,6,7,8,9,10];
+
+// numeros.forEach(function(n) {
+//     console.log(`7 x ${n} = ${7 * n}`)
+// });
+//e' a mesma funcao, porem redusida
+// numeros.forEach(n => console.log(`7 x ${n} = ${7 * n}`))
+
+
+// 1 Mostrar os numeros de 1 a 10 com while
+// let a = 1
+// while (a <= 10) {
+//     console.log(`${a}`)
+//     a++
+// }
+
+// 2 Mostrar a tabuada do 5 com o for
+// for (let i = 1; i <= 10; i++) {
+//     console.log(`5 x ${i} = ${5 * i}`);
+// }
+
+// 3 somar os numeros de 1 a 100 com o for
+// soma = 0
+// for (let i = 1; i <= 100; i++) {
+//     soma += i
+// }
+// console.log(`A soma de 1 a 100 e': ${soma}`)
+
+// 4 A media de 5 numeros
+// let media = 0
+// for (let i = 1; i <= 5; i++) {
+//     const a = Number(prompt(`Digite o ${i} numero:` ));
+//     media += a
+// }
+// alert(`A media e' ${media / 5}`)
+
+// Ler nomes ate digitar sair.
+// let nome;
+// do {
+//     nome = prompt("Digite seu nome ou sair para encerrar: ").toUpperCase();
+//     if (nome !== "SAIR") {
+//         alert(`Voce digitou: ${nome}`)
+//     }
+// } while (nome !== "SAIR");
+// alert(`Ate' mais!!`)
+
+
+// Math
+console.log(Math.PI)
+
+console.log(Math.floor(4.9));
+console.log(Math.ceil(4.9));
+console.log(Math.round(4.9));
+
+console.log(Math.pow(2, 3));
+
+console.log(Math.sqrt(16));
+
+console.log(Math.min(4,9,8,7,6,10,15,1,8,12));
+console.log(Math.max(4,9,8,7,6,10,15,1,8,12));
+
+

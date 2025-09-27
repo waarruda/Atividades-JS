@@ -88,15 +88,123 @@
 // 2. **Maior entre três números:**
 //     - O usuário insere três números.
 //     - Use `if-else` para determinar e exibir o maior.
-const num2 = Number(prompt("Digite um numero:"));
-const num3 = Number(prompt("Digite outro numero:"));
-const num4 = Number(prompt("Digite outro numero:"));
-if ((num2 > num3) && (num2 > num4)) {
-    alert(`O maior numero e ${num2}`)
-}
-else if ((num3 > num2) && (num3 > num4)){
-    alert(`O maior numero e ${num2}`)
+// const num2 = Number(prompt("Digite um numero:"));
+// const num3 = Number(prompt("Digite outro numero:"));
+// const num4 = Number(prompt("Digite outro numero:"));
+// if ((num2 > num3) && (num2 > num4)) {
+//     alert(`O maior numero e ${num2}`)
+// }
+// else if (num3 > num4){
+//     alert(`O maior numero e ${num3}`)
+// } 
+// else {
+//     alert(`O maior numero e ${num4}`)
+// }
+
+// 3. **Desconto em compras:**
+// - Se o valor da compra for maior que R$ 100, aplique 10% de desconto.
+// - Caso contrário, exiba o valor normal.
+
+// const preco = Number(prompt("Qual o valor do produto em R$: "))
+// if (preco > 100) {
+//     const precodes = preco * 0.9
+//     alert(`Total a pagar com 10% de desconto e R$ ${precodes.toFixed(2)}`)
+// }
+// else {
+//     alert(`O total e R$ ${preco.toFixed(2)}`)
+// }
+
+// 4. **Sistema de login simples:**
+//     - O usuário insere um nome de usuário e senha.
+//     - Se `usuario == "admin"` e `senha == "1234"`, exibir "Login bem-sucedido", caso contrário "Acesso negado".
+
+// const usuario = prompt("Digite o seu usuario: ").toLowerCase();
+// const password = Number(prompt("Digite sua senha numerica:"));
+
+// if ((usuario === "admin") && password === 1234) {
+//     alert(`Bem vindo ${usuario}!`)
+// } else {
+//     alert(`Acesso negado, usuario ou senha invalidos`);
+// }
+
+// 1. **Classificação de triângulos:**
+//     - O usuário insere três lados.
+//     - Verifique se forma um triângulo e classifique como equilátero, isósceles ou escaleno.
+// const lado1 = Number(prompt("Insira o primeiro lado do triangulo: "))
+// const lado2 = Number(prompt("Insira o segundo lado do triangulo: "))
+// const lado3 = Number(prompt("Insira o terceiro lado do triangulo: "))
+
+// if ((lado1 === lado2) & (lado2 === lado3)) {
+//     alert(`O triangulo e' equilatero`);
+// }
+// else if (((lado1 === lado2) & (lado2 != lado3)) || ((lado2 === lado3) & (lado1 != lado3)) || ((lado1 === lado3) & (lado1 != lado2))) {
+//     alert(`O triangulo e' isosceles`);
+// }
+// else {
+//     alert(`O triangulo e' escaleno`);
+// }
+
+// 2. **Conversão de notas para conceitos:**
+//     - O usuário insere uma nota (0-100).
+//     - Converta para conceitos:
+//     - `A` (90-100), `B` (80-89), `C` (70-79), `D` (60-69), `F` (<60).
+
+// const aluno = prompt("Digite seu nome: ");
+// const nota = Number(prompt("Digite sua nota: (0 a 100) "));
+
+// if (nota >= 90) {
+//     alert(`${aluno} sua nota foi A!!`);
+// }
+// else if (nota >= 80) {
+//     alert(`${aluno} sua nota foi B!!`);
+// }
+// else if (nota >= 70) {
+//     alert(`${aluno} sua nota foi C!!`);
+// }
+// else if (nota >= 60) {
+//     alert(`${aluno} sua nota foi D!!`);
+// }
+// else {
+//     alert(`${aluno} sua nota foi F!!`);
+// }
+
+// 3. **Cálculo de IMC:**
+//     - Peça peso e altura.
+//     - Calcule o IMC e classifique como abaixo do peso, normal, sobrepeso ou obesidade.
+
+// const nome = prompt("Digite seu nome: ");
+// const peso = Number(prompt("Digite seu peso (kg): "));
+// const altura = Number(prompt("Digite sua altura (m): "));
+// //processamento
+// const imc = peso / (altura ** 2);
+// //saida
+// if (imc < 18) {
+//     alert(`Ola ${nome}, seu IMC e: ${imc.toFixed(2)}, voce esta abaixo do peso`);
+// }
+// else if (imc < 24.9) {
+//     alert(`Ola ${nome}, seu IMC e: ${imc.toFixed(2)}, voce esta normal`);
+// }
+// else if (imc < 29.9) {
+//     alert(`Ola ${nome}, seu IMC e: ${imc.toFixed(2)}, voce esta com sobrepeso`);
+// }
+// else if (imc < 34.9) {
+//     alert(`Ola ${nome}, seu IMC e: ${imc.toFixed(2)}, voce esta obeso`);
+// }
+// else {
+//     alert(`Ola ${nome}, seu IMC e: ${imc.toFixed(2)}, voce esta muito obeso`);
+// }
+
+// 4. **Validação de ano bissexto:**
+//     - Peça um ano e verifique se é bissexto.
+//     - Um ano é bissexto se for divisível por 4, mas não por 100, exceto se for divisível por 400.
+const ano = Number(prompt("Informe um ano: "));
+if (Number.isNaN(ano)) {
+    alert(`Valor invalido`);
 } 
-else if ((num4 > num2) && (num4 > num3)){
-    alert(`O maior numero e ${num4}`)
-}// Rsrsr Esse nao funcionou
+else if ((ano % 4 === 0 && ano % 100 !== 0) || (ano % 400 === 0)) {
+    alert(`Ano bissexto`);
+}
+else {
+    alert(`Nao e bissexto`);
+}
+    
