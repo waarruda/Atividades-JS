@@ -302,17 +302,156 @@
 
 
 // Math
-console.log(Math.PI)
+// console.log(Math.PI)
 
-console.log(Math.floor(4.9));
-console.log(Math.ceil(4.9));
-console.log(Math.round(4.9));
+// console.log(Math.floor(4.9));
+// console.log(Math.ceil(4.9));
+// console.log(Math.round(4.9));
 
-console.log(Math.pow(2, 3));
+// console.log(Math.pow(2, 3));
 
-console.log(Math.sqrt(16));
+// console.log(Math.sqrt(16));
 
-console.log(Math.min(4,9,8,7,6,10,15,1,8,12));
-console.log(Math.max(4,9,8,7,6,10,15,1,8,12));
+// console.log(Math.min(4,9,8,7,6,10,15,1,8,12));
+// console.log(Math.max(4,9,8,7,6,10,15,1,8,12));
 
 
+// funcao Callback
+
+// const alunos = ["Ana", "Bruno", "Carla", "Wilson"];
+
+// const listaNumerada2 = alunos.map((nome, index) => {
+//     return `${index + 1} - $ {nome}`
+// });
+
+// console.log(listaNumerada2)
+
+// const listaNumerada = alunos.map((nome, index) => `${index + 1} - ${nome}`);
+
+// const produtos = ["lapis", "caneta", "caderno"];
+
+// const maiusculos = produtos.map((element) => {
+//     return element.toUpperCase();
+// })
+// console.log(maiusculos)
+
+// const lucas = {name: "Lucas", lastName: "Lacerda", age: 20};
+// const maria = {name: "Maria", lastName: "Oliveira", age: 17};
+// const joao = {name: "Joao", lastName: "Silva", age: 18};
+// const ana = {name: "Ana", lastName: "Santos", age: 22};
+
+// const people = [lucas, maria, joao, ana];
+
+//Filter A peneira
+//Cria um *novo array* com elementos que passam em um teste logico
+//Callback deve retornar *true* ou *false*
+//Retorna *novo array* (nao altera o original)
+
+// const maiores = people.filter((value, index, array) => {
+//     console.log("Index:", index);
+//     console.log("Value:", value.name);
+
+//     return value.age >= 18;
+// });
+
+// console.log("Resultado filter", maiores);
+
+//Map - O transformador
+// Cria um *novo array do mesmo tamanho*, transformando os elementos
+// Util para extrair campos, modificar valores, gerar novos objetos
+// Retorna um array novo (imutavel)
+
+// const frases = people.map((value, index, array) => {
+//     console.log("Index", index);
+//     console.log("Pessoa", value.name);
+//     console.log("Index", value.age);
+
+//     return `${value.name} tem ${value.age} anos!`;
+// });
+
+// console.log("Resultado map:", frases);
+
+//Find - O buscador unico
+//find retorna o primeiro elemento que satisfaz a condicao
+//Se nenhum elemento atender retorna Undefined
+//Nao altera o array original
+
+// const mariaEncontrada = people.find((value, index, array) => {
+//     console.log("Index", index);
+//     console.log("Pessoa", value.name);
+
+//     return value.name === "Maria"
+// });
+
+// console.log("Resultado find", mariaEncontrada);
+
+//Reduce - O Agregador
+//O Reduce *reduz um array inteiro a um unico valor* Ele percorre cada elemento
+//do array e cai acumulando um resultado com base na funcao que voce passa
+//reduce, reduz o array inteiro a **um unico valor**
+//Esse valor pode ser: numero, string, objeto, array etc
+//muito poderoso para somas, agrupamentos e estatisticas
+//acc descricao geralmente encontrada para acumulador
+
+// array.reduce((acc, elementoAtual, indice, arrayOriginal) => {
+//     return novoAcumulador;
+// }, 0);
+
+// const somaIdades = people.reduce((acc, value, index, array) => {
+//     console.log("Index", index);
+//     console.log("Pessoa", value.name, value.age);
+//     console.log("Acumulador antes:", acc);
+
+//     return acc + value.age;
+// }, 0);
+
+// console.log("Resultado reduce:", somaIdades);
+
+//Ex 1 - Filter
+//Dado const arr = [10, 15, 20, 25, 30], use filter para obter numeros maiores ou iguais a 20
+
+// const arr = [10, 15, 20, 25, 30];
+//forma reduzida e mais utilizada
+// const ge20 = arr.filter((n => n >= 20));
+//forma comum
+// const ge20 = arr.filter((n) => {
+//     return n >= 20;
+// });
+// console.log("Resultado filter", ge20);
+
+//Ex 2 - Map (facil)
+//Dado const palavras = ["js", "html"], use o map para capitalizar
+
+// const palavras = ["js", "html"]
+//forma reduzida
+// const upper = palavras.map((s => s.toUpperCase()));
+//forma comum
+// const capitalizar = palavras.map((word) => {
+//     return word.toUpperCase()
+// });
+// console.log("Maiusculos", capitalizar);
+// console.log("Maiusculos", upper);
+
+//EX 3 - Find (facil)
+//Dado um array de objetos usuarios, encontre o usuario com idd === 3
+
+// const usuarios = [
+//     {id: 1, nome: "A"},
+//     {id: 3, nome: "C"},
+//     {id: 2, nome: "B"},
+// ];
+
+// const encontra = usuarios.find((u => u.id === 3));
+// console.log("Encontrado:", encontra);
+
+//Ex 4 - Map + filter (medio)
+//Dado produtos com {nome, preco} crie um array com nomes dos produtos com preco > 20
+
+const produtos = [
+    {nome: "X", preco: 10},
+    {nome: "Y", preco: 20},
+    {nome: "Z", preco: 30},
+    {nome: "W", preco: 15},
+];
+const mf = produtos.filter((valor => valor.preco >= 20)).map((pr => pr.nome));
+console.log(mf)
